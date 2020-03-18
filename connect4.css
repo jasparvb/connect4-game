@@ -95,7 +95,7 @@ h1 {
 button {
   font-size: 1rem;
   font-family: 'Acme', Arial, Helvetica, sans-serif;
-  border: 0.2rem solid black;
+  border: 0.1rem solid black;
   border-radius: 0.2rem;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
