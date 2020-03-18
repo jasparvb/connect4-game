@@ -1,0 +1,113 @@
+/* game board table */
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Acme', Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+#game {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#board {
+  background-color: blue;
+  border-spacing: 0;
+}
+
+#board td {
+  width: 70px;
+  height: 70px;
+  border: solid 1px darkblue;
+  position: relative;
+}
+
+.piece {
+  margin: 10%;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  transition: top 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+}
+
+.p1 {
+  background-color: red;
+}
+
+.p2 {
+  background-color: yellow;
+}
+
+#column-top td .piece {
+  background-color: lightgray;
+  width: 78%;
+}
+
+#board #column-top td {
+  border: none;
+}
+
+#column-top td .piece:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+#column-top.player2 td .piece:hover {
+  background-color: yellow;
+}
+
+.game-message {
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  height: 30%;
+  top: 50%;
+  background: #ffffff;
+  left: 50%;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 8px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px 3px rgba(0,0,0,.12);
+  opacity: 1;
+  display: block;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.game-message p {
+  padding: 10px;
+}
+
+.game-message.hide {
+  opacity: 0;
+  display: none;
+}
+
+button {
+  font-size: 1rem;
+  font-family: 'Acme', Arial, Helvetica, sans-serif;
+  border: 0.2rem solid black;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 200px;
+}
+
+button:focus {
+  border-radius: 0.2rem;
+  outline: none;
+}
+
+button:hover {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2), 0px 4px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0,0,0,.12);
+}
