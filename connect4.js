@@ -3,21 +3,7 @@
  * Player 1 and 2 alternate turns. On each turn, a piece is dropped down a
  * column until a player gets four-in-a-row (horiz, vert, or diag) or until
  * board fills (tie)
- * 
- -what HTML would be useful for the game board itself? > a table
- -how could you represent a played-piece in the HTML board? > a div or span made into a circle
- -in the JavaScript, what would be a good structure for the in-memory game board? > an array
- -what might the flow of the game be? > build board on start, add event listeners to top row, on click check to see if that column has room, add a dot if it does,
- then check to see if there are four in a row or if the board is full. End game if one of those is true, otherwise switch to the other player.
- function ideas:
- buildBoard()
- buidlHTMLBoard()
- checkForFreeSlot()
- addPiece()
- checkForWin()
- checkForFullBoard()
- endOfGame()
- 
+ *  
 */
 
 const WIDTH = 7;
